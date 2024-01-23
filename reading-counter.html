@@ -88,7 +88,6 @@
             </button>
         </div>
     </div>
-    <a class="github" href="https://github.com/AleehSophia/notion_widgets/blob/main/reading-counter.html" target="_blank">Made with 🩷</a>
 <script>
 
     let add = document.querySelector("#bt-add");
@@ -113,30 +112,22 @@
     }
 
     let intervalId = 0;
-    minus.addEventListener('mousedown', () => {
-        intervalId = setInterval(() => {
-            minusCounter();
-        }, 100)
+    minus.addEventListener('click', () => {
+        minusCounter()
     });
 
     minus.addEventListener('touchstart', (e) => {
         e.preventDefault();
-        intervalId = setInterval(() => {
-            minusCounter();
-        }, 100)
+         minusCounter()
     });
 
-    add.addEventListener('mousedown', () => {
-        intervalId = setInterval(() => {
-            addCounter();
-        }, 100)
+    add.addEventListener('click', () => {
+        addCounter()
     });
 
     add.addEventListener('touchstart', (e) => {
         e.preventDefault();
-        intervalId = setInterval(() => {
-            addCounter();
-        }, 100)
+        addCounter()
     });
     document.addEventListener('mouseup', () => clearInterval(intervalId));
     document.addEventListener('touchend', () => clearInterval(intervalId));
